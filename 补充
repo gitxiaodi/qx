@@ -1,0 +1,59 @@
+# > 大众点评
+# 开屏广告
+^https:\/\/img\.meituan\.net\/dpmobile\/.+93241\.png url reject-dict
+^https?:\/\/img\.meituan\.net\/dpmobile\/.*.(gif|jpg) url reject-200
+
+# > 东方财富
+^https?:\/\/emdcadvertise\.eastmoney\.com\/infoService\/v2 url reject-200
+^https?:\/\/emdcadvertise\.eastmoney\.com\/infoService\/v\d url reject
+
+# > 粉笔
+# 开屏广告
+^https:\/\/tiku\.fenbi\.com\/activity\/app\/launcher\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/fenbi.js
+
+# > 工商银行
+#^https?:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/ url reject-200
+
+# > 广东移动
+^https?:\/\/gd\.10086\.cn\/gmccapp\/serv\/\?servicename=GMCCAPP_704_002_001_001 url reject-200
+
+# > 京东
+^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/202220\/24\/21575\/134711\/625b821bE5d642d73\/77636692989bd2be\.jpg url reject
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs\/t1\/96405\/17\/28473\/168578\/625cd144E7997a990\/8233ce8a10c4e463\.jpg url reject
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs\/t1\/182114\/23\/23904\/121433\/62593c9cEd77c4519\/2e3f4c518b771094\.jpg url reject
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs\/t1\/202971\/34\/26906\/282671\/6319c862E1818d3fa\/0597464cf6bc8e2f\.jpg url reject
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs\/t1\/143222\/27\/29233\/141967\/631b1f8cE3a112e54\/d3fe0b2f9f0a9f30\.jpg url reject
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs url reject
+^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/197429\/22/22400\/119193\/62562ef0Eff59b4d4 url reject
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$ url reject-array
+^https?://union.click.jd.com/jda? url request-header ^(.+?\s).+?(\s[\s\S]+?Host:).+?(\r\n) request-header $1/jda?adblock=$2union.click.jd.com$3
+^https?://union.click.jd.com/sem.php? url request-header ^(.+?\s).+?(\s[\s\S]+?Host:).+?(\r\n) request-header $1/sem.php?adblock=$2union.click.jd.com$3
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/(aladdin\/na\/m\/getLoadingPicture|aladdin\/na\/m\/getLoadingPicture) url reject
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture url reject
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/(new)?na\/m\/adInfo url reject
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/na\/m\/adInfo url reject
+^https?:\/\/bdsp-x\.jd\.com\/adx\/ url reject
+^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=(start|queryMaterialAdverts) url reject
+^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ url reject
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$ url reject-200
+^https?:\/\/img\d+\.360buyimg\.com\/jddjadvertise\/ url reject
+^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/197429\/22\/22400\/119193\/62562ef0Eff59b4d4 url reject
+^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/220846\/5\/16214\/41327 url reject
+^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/202818 url reject
+^https?:\/\/storage\.360buyimg\.com\/kepler-app url reject-img
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s640x1136_jfs\/ url reject-img
+
+# > 顺丰
+^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/appVersion\/detectionUpgrade url reject-dict
+^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/ url reject
+^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen url reject
+https://ccsp-egmas.sf-express.com/cx-app-base/base/app/ad/queryAdImages url reject
+https://ccsp-egmas.sf-express.com/cx-app-base/base/app/ad/queryInfoFlow url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/shunfeng_json.js
+
+# > 完美世界电竞 #开屏广告 感谢@豆豆分享
+^https:\/\/api\.wmpvp\.com\/api\/v1\/config\/promote url reject
+
+# > 下厨房
+^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ url reject
+
+hostname = img.meituan.net, emdcadvertise.eastmoney.com, tiku.fenbi.com, v.icbc.com.cn, gd.10086.cn, m15.360buyimg.com, m.360buyimg.com, ms.jr.jd.com, bdsp-x.jd.com, dsp-x.jd.com, img11.360buyimg.com, ccsp-egmas.sf-express.com, shopic.sf-express.com, api.wmpvp.com, api.xiachufang.com
