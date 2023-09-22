@@ -21,3 +21,8 @@ HOST,adm1.autoimg.cn, reject
 HOST,adm2.autoimg.cn, reject
 HOST,adm3.autoimg.cn, reject
 
+# > 小米米家
+host, sdkconfig.ad.xiaomi.com, reject
+
+# > 深圳通微信小程序
+host-suffix, wxsnsdythumb.wxs.qq.com, reject
