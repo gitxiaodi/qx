@@ -1,7 +1,3 @@
-# 广告联盟
-HOST-KEYWORD, volcvod.com, REJECT
-HOST-KEYWORD, volceapplog.com, REJECT
-
 # > 汽车之家
 host-keyword, adm3.autoimg.cn, reject
 ;host-keyword, audid-api.taobao.com, reject
