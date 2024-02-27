@@ -1,3 +1,18 @@
+# ***解锁*** #
+# 彩云天气 //*.cyapi.cn
+^https:\/\/biz\.cyapi\.cn\/p\/v1\/entries\? url reject-dict
+^https:\/\/biz\.cyapi\.cn\/(p\/v1\/vip_info|v2\/user) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js
+^https:\/\/starplucker\.cyapi\.cn\/v3\/operation\/homefeatures\? url reject-dict
+^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js
+^https:\/\/wrapper\.cyapi\.cn\/v1\/(nafp\/origin_images|satellite)\? url script-request-header https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js
+
+# Emby播放权限 //mb3admin.com
+^https:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/emby.js
+# Enpass Password Manager解锁订阅 //license.enpass.io
+^https:\/\/license\.enpass\.io\/api\/v1\/subscription\/me url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/enpass.js
+
+
+
 # > 东方财富
 # hostname = emdcadvertise.eastmoney.com
 ^https?:\/\/emdcadvertise\.eastmoney\.com\/infoService\/v\d url reject
@@ -73,4 +88,4 @@
 # 首页横幅广告
 ^https:\/\/mbmodule-openapi\.paas\.cmbchina\.com\/graphic\/v2\/module\/graphic url reject-dict
 
-hostname = emdcadvertise.eastmoney.com, img.meituan.net, tiku.fenbi.com, business.msstatic.com, cdnfile1.msstatic.com, live-ads.huya.com, yunbusiness.ccb.com, ccsp-egmas.sf-express.com, ucmp.sf-express.com, api-sams.walmartmobile.cn, adproxy.autohome.com.cn, app2.autoimg.cn, api.wmpvp.com, mbmodule-openapi.paas.cmbchina.com, webappcfg.paas.cmbchina.com, thor.weidian.com, api.xueqiu.com, xqimg.imedao.com  
+hostname =  *.cyapi.cn, mb3admin.com, license.enpass.io, emdcadvertise.eastmoney.com, img.meituan.net, tiku.fenbi.com, business.msstatic.com, cdnfile1.msstatic.com, live-ads.huya.com, yunbusiness.ccb.com, ccsp-egmas.sf-express.com, ucmp.sf-express.com, api-sams.walmartmobile.cn, adproxy.autohome.com.cn, app2.autoimg.cn, api.wmpvp.com, mbmodule-openapi.paas.cmbchina.com, webappcfg.paas.cmbchina.com, thor.weidian.com, api.xueqiu.com, xqimg.imedao.com  
