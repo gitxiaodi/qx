@@ -1,0 +1,76 @@
+# > 东方财富
+# hostname = emdcadvertise.eastmoney.com
+^https?:\/\/emdcadvertise\.eastmoney\.com\/infoService\/v\d url reject
+
+# > 大众点评
+# hostname = img.meituan.net
+# 开屏广告
+^https?:\/\/img\.meituan\.net\/dpmobile\/.+93241\.png url reject-dict
+^https?:\/\/img\.meituan\.net\/dpmobile\/.*.(gif|jpg) url reject-200
+
+# > 粉笔
+# hostname = tiku.fenbi.com
+# 开屏广告
+^https:\/\/tiku\.fenbi\.com\/activity\/app\/launcher\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/fenbi.js
+
+# > 虎牙直播
+# hostname = cdn.wup.huya.com, business.msstatic.com, cdnfile1.msstatic.com, live-ads.huya.com
+^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$ url reject
+^https?:\/\/business\.msstatic\.com\/advertiser\/material url reject
+^https?:\/\/cdnfile1\.msstatic\.com\/cdnfile\/appad\/ url reject-img
+^https?://live-ads\.huya\.com/live/getAllEntrance.*$ url reject-dict
+
+# > 建行生活
+# hostname = yunbusiness.ccb.com
+# 首页横幅广告
+^https?:\/\/yunbusiness\.ccb\.com\/clp_service\/txCtrl\?txcode=A3341A00(2|6|9) url reject-200
+^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\?txcode=A3341AB04 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLife/ccbLifeAds.js
+# 删除首页+金融+我的多个横幅等乱七八糟的广告
+^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\?txcode=A3341AB05 url echo-response application/json echo-response https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLife/A3341AB05.json
+# 我的页面悬浮广告
+^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\? url response-body "TAG_AD_INFO" response-body "TAG_AD_INFO0"
+
+# > 顺丰快递
+# hostname = ccsp-egmas.sf-express.com, ucmp.sf-express.com
+# APP净化 感谢【怎么肥事】分享
+^https:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberGoods\/pointMallService\/goodsList url reject-dict
+^https:\/\/ccsp-egmas\.sf-express\.com\/cx-app-video\/video\/app\/video\/labelClusterList url reject-dict
+^https:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/queryInfoFlow url reject-dict
+^https:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/bms\/queryRecommend url reject-dict
+
+# > 山姆会员商店
+# hostname = api-sams.walmartmobile.cn
+^https?:\/\/api-sams\.walmartmobile\.cn\/.*(screen_promotion|getTotalUnreadCount|getGoUpPlus).* url reject
+^https?:\/\/api-sams\.walmartmobile\.cn\/api\/v1\/sams\/sams-user\/(window\/getGoUpPlus|screen_promotion\/get) url reject
+
+# > 汽车之家
+^https?:\/\/adproxy\.autohome\.com\.cn\/AdvertiseService\/ url reject-img
+^https?:\/\/app2\.autoimg\.cn\/apppdfs\/ url reject-img
+
+# > 完美世界电竞
+# hostname = api.wmpvp.com
+# 开屏广告
+^https:\/\/api\.wmpvp\.com\/api\/v1\/config\/promote url reject
+
+# > 微店
+# hostname = thor.weidian.com
+^https?:\/\/thor\.weidian\.com\/ares\/home\.splash url reject-200
+
+# > 雪球
+# hostname = api.xueqiu.com, xqimg.imedao.com
+# 开屏广告 感谢【Runestoner】分享
+^https:\/\/api\.xueqiu\.com\/brand\/search\/v1\.json\? url reject
+^https?:\/\/xqimg\.imedao\.com\/[a-z0-9]{24}\.jpg$ url reject-200
+# 感谢【Joe Joy】分享
+^https:\/\/api\.xueqiu\.com\/snowpard\/launch_strategy\/query\.json\? url reject-dict
+# 去除首页的广告
+^https:\/\/api.xueqiu.com\/ucprofile\/api\/user\/batchGetUserBasicInfo.json url reject-dict
+
+# > 招商银行
+# hostname = webappcfg.paas.cmbchina.com
+# 开屏广告
+^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig url reject-200
+# 首页横幅广告
+^https:\/\/mbmodule-openapi\.paas\.cmbchina\.com\/graphic\/v2\/module\/graphic url reject-dict
+
+hostname = emdcadvertise.eastmoney.com, img.meituan.net, tiku.fenbi.com, business.msstatic.com, cdnfile1.msstatic.com, live-ads.huya.com, yunbusiness.ccb.com, ccsp-egmas.sf-express.com, ucmp.sf-express.com, api-sams.walmartmobile.cn, adproxy.autohome.com.cn, app2.autoimg.cn, api.wmpvp.com, mbmodule-openapi.paas.cmbchina.com, webappcfg.paas.cmbchina.com, thor.weidian.com, api.xueqiu.com, xqimg.imedao.com  
