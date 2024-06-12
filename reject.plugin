@@ -1,0 +1,61 @@
+# Apple
+DOMAIN,advertising.apple.com, REJECT
+DOMAIN,api-adservices.apple.com, REJECT
+DOMAIN,apple.comscoreresearch.com, REJECT
+DOMAIN,banners.itunes.apple.com, REJECT
+DOMAIN,iad.apple.com, REJECT
+DOMAIN,iadcontent.apple.com, REJECT
+DOMAIN,iadctest.qwapi.com, REJECT
+DOMAIN,iadmoo.apple.com, REJECT
+DOMAIN,iadworkbench.apple.com, REJECT
+DOMAIN,launch.apple.com, REJECT
+DOMAIN,qwapi.apple.com, REJECT
+DOMAIN-SUFFIX,advp.apple.com, REJECT
+DOMAIN-SUFFIX,iad-apple.com, REJECT
+DOMAIN-SUFFIX,iadsdk.apple.com, REJECT
+
+# 安全浏览限制解除
+DOMAIN,lookup.api.bsb.baidu.com, REJECT
+DOMAIN-SUFFIX,u3.ucweb.com, REJECT
+DOMAIN-KEYWORD,safebrowsing., REJECT
+
+# 百度
+DOMAIN,mobads.baidu.com, REJECT
+DOMAIN-SUFFIX,pos.baidu.com, REJECT
+DOMAIN,afd.baidu.com, REJECT
+DOMAIN,afdconf.baidu.com, REJECT
+DOMAIN,lc.map.baidu.com, REJECT
+
+# 彩云天气
+DOMAIN,ad.cyapi.cn, REJECT
+
+# 广告联盟
+DOMAIN,init.supersonicads.com, REJECT
+DOMAIN,open.kuaishou.com, REJECT
+DOMAIN,pagead2.googlesyndication-cn.com, REJECT
+DOMAIN,pagead2.googlesyndication.com, REJECT
+DOMAIN,ws.tapjoyads.com, REJECT
+DOMAIN,www.googleadservices.com, REJECT
+DOMAIN-SUFFIX,ads.linkedin.com, REJECT
+DOMAIN-SUFFIX,ads.vungle.com, REJECT
+DOMAIN-SUFFIX,adservice.google.com, REJECT
+DOMAIN-SUFFIX,applovin.com, REJECT
+DOMAIN-SUFFIX,applvn.com, REJECT
+DOMAIN-SUFFIX,appsflyer.com, REJECT
+DOMAIN-SUFFIX,appsflyersdk.com, REJECT
+DOMAIN-SUFFIX,kuaishouzt.com, REJECT
+DOMAIN-SUFFIX,unityads.unity3d.com, REJECT
+DOMAIN-KEYWORD,-ad-sign.byteimg.com, REJECT
+DOMAIN-KEYWORD,ads.g.doubleclick, REJECT
+DOMAIN-KEYWORD,asiad.byteactivity, REJECT
+DOMAIN-KEYWORD,pangolin-sdk-toutiao, REJECT
+DOMAIN-KEYWORD,pangolin.snssdk.com, REJECT
+DOMAIN-KEYWORD,pglstatp-toutiao, REJECT
+DOMAIN-KEYWORD,video-cn.snssdk.com, REJECT
+
+# Javdb
+DOMAIN,api.liquidlink.cn, REJECT
+
+# 美团
+IP-CIDR,103.37.155.60/32, REJECT
+
