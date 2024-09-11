@@ -1,5 +1,6 @@
 payload:
   # PS规则
+  - DOMAIN-KEYWORD,adobe,REJECT
   - DOMAIN,cc-api-data.adobe.io,REJECT
   - DOMAIN,lcs-cops.adobe.io,REJECT
   - DOMAIN,cctypekit.adobe.io,REJECT
