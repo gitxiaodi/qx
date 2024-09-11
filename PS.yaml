@@ -1,0 +1,10 @@
+payload:
+  # PS规则
+  - DOMAIN,cc-api-data.adobe.io,REJECT
+  - DOMAIN,lcs-cops.adobe.io,REJECT
+  - DOMAIN,cctypekit.adobe.io,REJECT
+  - DOMAIN,ic.adobe.io,REJECT
+  - DOMAIN,www.adobe.com,REJECT
+  - DOMAIN,lcs-robs.adobe.io,REJECT
+  - DOMAIN,crs.cr.adobe.com,REJECT
+ 
